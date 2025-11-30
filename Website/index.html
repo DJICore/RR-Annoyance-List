@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Rec Room Annoyance List</title>
+    <meta name="twitter:title" content="Rec Room Annoyance list">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=7fdedab8041cc4b4b97c9f2701f4bd23">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/styles.css?h=ba4b30a5d7af515a78aaab55ade1de30">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Rec Room Annoyance List</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><button class="btn btn-secondary btn-sm" id="rules-button" type="button">Rules: {{amount}}</button><button class="btn btn-secondary btn-sm" id="players-button" type="button">Players: {{amount}}</button></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Account Name</th>
+                                    <th>Violations</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <tr class="sample-row">
+                                    <td>Cell 1</td>
+                                    <td><span data-bs-toggle="tooltip" data-bss-tooltip="" class="violation-pill" title="d">Text</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" role="dialog" tabindex="-1" id="rules-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style="overflow: hidden;">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bolder">Rules</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="padding: 0;">
+                    <div class="table-responsive" style="margin-bottom: -1.1rem;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBodyRules">
+                                <tr id="sample-row">
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js?h=6bcc3684f18aa21874fa709f122723cf"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js?h=2cf0875e1daf356bc4e64c053e7a4150"></script>
+    <script src="assets/js/bs-init.js?h=f85385df9bc7fca4241bc1dbf53b9d61"></script>
+    <script src="assets/js/Data/players.mjs?h=f54f3294a782e41f1152cecc722fd0ca" type="module"></script>
+    <script src="assets/js/Data/rules.mjs?h=ba1c6c792723c6d181237708f28ada63" type="module"></script>
+    <script src="assets/js/main.mjs?h=6fd24caf06d1220a8271c20e81117793" type="module"></script>
+</body>
+
+</html>
