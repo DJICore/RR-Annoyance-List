@@ -7,6 +7,7 @@ $(function () {
   const _ = {
     data: {
       recnet: {
+        proxy: { enabled: false, baseUrl: 'https://proxy.corsfix.com/?' },
         endpoints: {
           accountSearch: 'apim.rec.net/accounts/account/search?name={{accountName}}',
           accountById: 'accounts.rec.net/account/bulk{{queryIds}}' // Example: ?id=1&id=2&id=3
@@ -131,7 +132,7 @@ $(function () {
                 if (query.length < 2) return;
                 const matchedPlayers = await request({
                   url: _.data.recnet.endpoints.accountSearch.replace('{{accountName}}', encodeURIComponent(query)),
-                  proxy: { enabled: true, baseUrl: 'https://api.cors.lol/?url=' }
+                  proxy: _.data.recnet.proxy
                 });
                 _.render.modals.insertPlayers.showPlayerSearchDropdown(playerInput, matchedPlayers.data);
               });
