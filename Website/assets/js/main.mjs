@@ -8,8 +8,8 @@ $(function () {
     data: {
       recnet: {
         endpoints: {
-          accountSearch: 'https://apim.rec.net/accounts/account/search?name={{accountName}}',
-          accountById: 'https://accounts.rec.net/account/bulk{{queryIds}}' // Example: ?id=1&id=2&id=3
+          accountSearch: 'apim.rec.net/accounts/account/search?name={{accountName}}',
+          accountById: 'accounts.rec.net/account/bulk{{queryIds}}' // Example: ?id=1&id=2&id=3
         }
       },
       htmlIcons: {
