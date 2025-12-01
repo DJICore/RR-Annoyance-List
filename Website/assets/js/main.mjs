@@ -57,7 +57,7 @@ $(function () {
         players: async () => {
           $('.sample-row').remove(); // Clear existing sample rows
           let rowTemplate = `<tr>
-            <td><b id="playername-{{accountId}}">{{accountName}}</b></td>
+            <td class="player-account-name"><a target="_blank" href="https://rec.net/user/{{accountName}}"><b id="playername-{{accountId}}">{{accountName}}</b></a></td>
             <td class="player-display-name"></td>
             <td>{{accountId}}</td>
             <td class="player-violations">{{violations}}</td>
@@ -78,6 +78,7 @@ $(function () {
             tableBody.append(rowTemplate
               .replace('{{accountId}}', player.accountId)
               .replace('{{accountName}}', player.accountNameFallback)
+              .replace('{{accountName}}', player.accountNameFallback)
               .replace('{{accountId}}', player.accountId)
               .replace('{{violations}}', violationsHtml));
           });
@@ -96,8 +97,10 @@ $(function () {
             const playerNameElement = $(`#playername-${account.accountId}`);
             if (playerNameElement.length) {
               playerNameElement.html('@' + account.username);
+              const playerHrefElement = playerNameElement.parent();
+              playerHrefElement.attr('href', 'https://rec.net/user/' + account.username);
             }
-            const playerDisplayNameElement = playerNameElement.parent().parent().find('.player-display-name');
+            const playerDisplayNameElement = playerNameElement.parent().parent().parent().find('.player-display-name');
             if (playerDisplayNameElement.length) {
               playerDisplayNameElement.html(account.displayName);
             }

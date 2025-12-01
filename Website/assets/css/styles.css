@@ -116,3 +116,13 @@ th {
   gap: .5rem;
 }
 
+.player-account-name a {
+  color: var(--bs-light-text-emphasis);
+  text-decoration: none;
+}
+
+.player-account-name a:hover {
+  color: var(--bs-dark-text-emphasis);
+  text-decoration: underline;
+}
+
