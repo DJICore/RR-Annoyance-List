@@ -9,8 +9,8 @@ $(function () {
       recnet: {
         proxy: { enabled: false, baseUrl: 'https://proxy.corsfix.com/?' },
         endpoints: {
-          accountSearch: 'apim.rec.net/accounts/account/search?name={{accountName}}',
-          accountById: 'accounts.rec.net/account/bulk{{queryIds}}' // Example: ?id=1&id=2&id=3
+          accountSearch: 'https://apim.rec.net/accounts/account/search?name={{accountName}}',
+          accountById: 'https://accounts.rec.net/account/bulk{{queryIds}}' // Example: ?id=1&id=2&id=3
         }
       },
       htmlIcons: {
