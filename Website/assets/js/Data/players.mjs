@@ -325,4 +325,80 @@ export const players = [
     "accountId": 38282063,
     "violations": [5]
   }
+  ,
+  {
+    "accountNameFallback": "@nvm",
+    "accountId": 4407347,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@MrGrapple",
+    "accountId": 5098040,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@BoredSloth12665",
+    "accountId": 1758186768,
+    "violations": [2]
+  },
+  {
+    "accountNameFallback": "@Banwan",
+    "accountId": 1576187,
+    "violations": [10, 12]
+  },
+  {
+    "accountNameFallback": "@BigsugarNL",
+    "accountId": 2361681,
+    "violations": [10, 12]
+  },
+  {
+    "accountNameFallback": "@official-BON",
+    "accountId": 1132690436,
+    "violations": [10]
+  },
+  {
+    "accountNameFallback": "@BoosneesJaff",
+    "accountId": 12718761,
+    "violations": [10, 12, 3]
+  },
+  {
+    "accountNameFallback": "@Cabo",
+    "accountId": 4863162,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@EggVr",
+    "accountId": 4852242,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@Froggy",
+    "accountId": 4231343,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@wreackfull",
+    "accountId": 79586664,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@HuzzHuzz",
+    "accountId": 60300596,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@TakeFlightKingTvOnYT",
+    "accountId": 120764192,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@1606.",
+    "accountId": 1587862634,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@Pure_Platinum78",
+    "accountId": 10881319,
+    "violations": [3]
+  }
 ]
