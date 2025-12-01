@@ -187,7 +187,7 @@ $(function () {
               let playerRowTemplate = `<tr>
                 <td class="player-input" contenteditable="true">Player</td>
                 <td class="player-id"></td>
-                <td class="player-violations"></td>
+                <td class="player-violations"> </td>
               </tr>`;
               addPlayerButton.on('click', function () {
                 _.render.modals.insertPlayers.refreshTable();
@@ -282,7 +282,7 @@ $(function () {
             let rowTemplate = `<tr>
               <td class="player-input" contenteditable="true">{{accountName}}</td>
               <td class="player-id">{{accountId}}</td>
-              <td class="player-violations">{{violations}}</td>
+              <td class="player-violations"> {{violations}}</td>
             </tr>`;
             tableBody.empty();
             $.each(_.data.insertPlayers, (index, player) => {

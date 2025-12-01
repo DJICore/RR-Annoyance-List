@@ -114,6 +114,7 @@ th {
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
+  min-height: 2.5rem;
 }
 
 .player-account-name a {
