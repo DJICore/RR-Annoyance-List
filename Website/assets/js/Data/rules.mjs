@@ -38,5 +38,21 @@ export const rules = {
   "9": {
     "title": "Engagement Botting",
     "description": "Using bots or automated scripts to inflate engagement metrics such as players in room, visits, cheers, or session time to misrepresent popularity."
+  },
+  "10": {
+    "title": "Disruptive Behavior",
+    "description": "Engaging in behavior that disrupts normal gameplay or social interactions, such as trolling, griefing, or intentionally causing disturbances in rooms."
+  },
+  "11": {
+    "title": "Racial Harassment",
+    "description": "Any form of racial harassment toward players, including derogatory comments, slurs, or behavior targeting individuals based on their race or ethnicity."
+  },
+  "12": {
+    "title": "Discrimination",
+    "description": "Any form of discrimination toward players, including derogatory comments, slurs, or behavior targeting individuals based on their identity, including but not limited to race, ethnicity, gender, sexual orientation, or disability."
+  },
+  "13": {
+    "title": "Inappropriate Content",
+    "description": "Any form of inappropriate content, including but not limited to hate speech, graphic violence, or explicit material."
   }
 }
