@@ -1,4 +1,9 @@
 #tableToolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 #tableToolbar #tableSearchBar {
@@ -8,5 +13,11 @@
   border: none;
   box-shadow: none;
   font-weight: bolder;
+  height: 2rem;
+}
+
+#tableToolbar #tableSortButton {
+  white-space: nowrap;
+  height: 2rem;
 }
 
