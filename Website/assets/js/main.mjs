@@ -131,7 +131,7 @@ $(function () {
                 if (query.length < 2) return;
                 const matchedPlayers = await request({
                   url: _.data.recnet.endpoints.accountSearch.replace('{{accountName}}', encodeURIComponent(query)),
-                  proxy: { enabled: true, baseUrl: 'https://proxy.corsfix.com/?' }
+                  proxy: { enabled: true, baseUrl: 'https://api.cors.lol/?url=' }
                 });
                 _.render.modals.insertPlayers.showPlayerSearchDropdown(playerInput, matchedPlayers.data);
               });
