@@ -18,13 +18,84 @@ section {
   margin: 2rem 0;
 }
 
-#rules-button, #players-button {
-  font-weight: bolder;
-  border-radius: .5rem;
+#rules-button, #players-button, #insert-players-button {
   margin-right: .5rem;
 }
 
 .modal-header {
   padding: .5rem 1rem;
+}
+
+.modal-footer {
+  padding: .5rem;
+  justify-content: start;
+}
+
+.btn {
+  border-radius: .5rem !important;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.modal-content {
+  border-radius: 1rem;
+}
+
+.btn-toolbar {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+}
+
+.editable {
+}
+
+#player-search-dropdown, #violations-dropdown {
+  position: fixed;
+  z-index: 9;
+  background-color: var(--bs-modal-bg);
+  border-width: .1rem;
+  border-color: var(--bs-modal-border-color);
+  border-style: solid;
+  border-radius: 0 0 .5rem .5rem;
+  overflow-y: scroll;
+  max-height: 10rem;
+}
+
+#player-search-dropdown .dropdown-item, #violations-dropdown .dropdown-item {
+  padding: .25rem .5rem;
+}
+
+#player-search-dropdown .dropdown-item:hover, #violations-dropdown .dropdown-item:hover {
+  background-color: var(--bs-modal-border-color);
+  cursor: pointer;
+}
+
+#insert-players-modal .player-input {
+  width: 30%;
+}
+
+#insert-players-modal .player-id {
+  width: 15%;
+}
+
+#insert-players-modal .player-violations {
+}
+
+#violations-dropdown .dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+#insert-players-export-json-modal #export-json-output {
+  margin: 0;
+  padding: 1rem;
 }
 

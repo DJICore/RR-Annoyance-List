@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=7fdedab8041cc4b4b97c9f2701f4bd23">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/styles.css?h=ba4b30a5d7af515a78aaab55ade1de30">
+    <link rel="stylesheet" href="assets/css/styles.css?h=fa11704275eebf8a05caaa2f2b4bea8f">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col"><button class="btn btn-secondary btn-sm" id="rules-button" type="button">Rules: {{amount}}</button><button class="btn btn-secondary btn-sm" id="players-button" type="button">Players: {{amount}}</button></div>
+                <div class="col" style="display: flex;"><button class="btn btn-secondary btn-sm" id="rules-button" type="button">Rules: {{amount}}</button><button class="btn btn-secondary btn-sm" id="players-button" type="button">Players: {{amount}}</button><button class="btn btn-secondary btn-sm" id="insert-players-button" type="button">Insert Players</button></div>
             </div>
         </div>
     </section>
@@ -78,12 +78,70 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="insert-players-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style="overflow: hidden;">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bolder">Insert Players</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="padding: 0;">
+                    <div class="table-responsive" style="margin-bottom: -1.1rem;">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Account Name</th>
+                                    <th>ID</th>
+                                    <th>Violations</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBodyInsertPlayers">
+                                <tr id="sample-row-1">
+                                    <td class="player-input" contenteditable="true">Player</td>
+                                    <td class="player-id"></td>
+                                    <td class="player-violations"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="player-search-dropdown"></div>
+                    <div id="violations-dropdown"></div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-toolbar">
+                        <div class="btn-group btn-group-sm" role="group"><button class="btn btn-primary" id="add-player-button" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -64 640 640" width="1em" height="1em" fill="currentColor">
+                                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                                    <path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"></path>
+                                </svg>Add Player</button></div>
+                        <div class="btn-group btn-group-sm" role="group"><button class="btn btn-primary" id="export-json-button" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor">
+                                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. -->
+                                    <path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM153 289l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L71 337c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM265 255l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path>
+                                </svg>Export</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="insert-players-export-json-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content" style="overflow: hidden;">
+                <div class="modal-header">
+                    <div style="line-height: 1rem;">
+                        <h4 class="modal-title fw-bolder">Export JSON</h4><small>Copy this and send to @DJICore on Discord.<br>Everything will be manually checked.<br>If approved you'll be to the contributors list.</small>
+                    </div><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="padding: 0;">
+                    <p id="export-json-output" contenteditable="true">Paragraph</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="assets/js/jquery.min.js?h=6bcc3684f18aa21874fa709f122723cf"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js?h=2cf0875e1daf356bc4e64c053e7a4150"></script>
     <script src="assets/js/bs-init.js?h=f85385df9bc7fca4241bc1dbf53b9d61"></script>
     <script src="assets/js/Data/players.mjs?h=f54f3294a782e41f1152cecc722fd0ca" type="module"></script>
     <script src="assets/js/Data/rules.mjs?h=ba1c6c792723c6d181237708f28ada63" type="module"></script>
-    <script src="assets/js/main.mjs?h=6fd24caf06d1220a8271c20e81117793" type="module"></script>
+    <script src="assets/js/main.mjs?h=c13f9e15a2d80db051f9c2b6cf953079" type="module"></script>
+    <script src="assets/js/Modules/API.mjs?h=7bd581aba5030b5afebcf337ef50ac7f" type="module"></script>
 </body>
 
 </html>
