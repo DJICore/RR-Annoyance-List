@@ -7,7 +7,7 @@ $(function () {
   const _ = {
     data: {
       recnet: {
-        proxy: { enabled: false, baseUrl: 'https://proxy.corsfix.com/?' },
+        proxy: { enabled: true, baseUrl: 'https://corsproxy.io/' },
         endpoints: {
           accountSearch: 'https://apim.rec.net/accounts/account/search?name={{accountName}}',
           accountById: 'https://accounts.rec.net/account/bulk{{queryIds}}' // Example: ?id=1&id=2&id=3
