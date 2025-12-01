@@ -8,9 +8,9 @@ html, body {
   background-color: var(--bs-light-bg-subtle);
   padding: .25rem .5rem;
   border-radius: 1rem;
-  margin-right: .5rem;
   font-size: .75rem;
   font-weight: bolder;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -97,5 +97,22 @@ section {
 #insert-players-export-json-modal #export-json-output {
   margin: 0;
   padding: 1rem;
+}
+
+th {
+  white-space: nowrap!important;
+}
+
+.player-display-name {
+  max-width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-violations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
 }
 
