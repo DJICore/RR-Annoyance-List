@@ -217,7 +217,7 @@ export const players = [
   {
     "accountNameFallback": "@Sus",
     "accountId": 574447844,
-    "violations": [3, 4, 5]
+    "violations": [0, 2, 3, 4, 5]
   },
   {
     "accountNameFallback": "@Mr.carota",
@@ -400,5 +400,11 @@ export const players = [
     "accountNameFallback": "@Pure_Platinum78",
     "accountId": 10881319,
     "violations": [3]
+  }
+  ,
+  {
+    "accountNameFallback": "@Rage",
+    "accountId": 19318572,
+    "violations": [0, 1, 2, 3, 8]
   }
 ]
