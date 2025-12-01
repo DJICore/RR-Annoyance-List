@@ -26,6 +26,7 @@ $(function () {
       console.log('Example - Violations for @BearDaBear:', _.func.getPlayerViolations('@BearDaBear'));
       _.render.table.players();
       _.render.toolbar.buttons();
+      _.load.table.toolbar.search();
     },
     func: {
       getViolationDefinition: (violationId) => {
@@ -50,6 +51,28 @@ $(function () {
         var sel = window.getSelection();
         sel.removeAllRanges();
         sel.addRange(range);
+      }
+    },
+    load: {
+      table: {
+        toolbar: {
+          search: () => {
+            let searchElement = $('#tableSearchBar');
+            let tableBody = $('#tableBody');
+            searchElement.on('keyup', function () {
+              const query = $(this).val().toLowerCase();
+              tableBody.find('tr').each(function () {
+                const row = $(this);
+                const playerName = row.find('.player-account-name').text().toLowerCase();
+                if (playerName.includes(query)) {
+                  row.show();
+                } else {
+                  row.hide();
+                }
+              });
+            });
+          }
+        }
       }
     },
     render: {

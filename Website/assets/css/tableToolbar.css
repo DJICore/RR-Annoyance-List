@@ -1,0 +1,12 @@
+#tableToolbar {
+}
+
+#tableToolbar #tableSearchBar {
+  border-radius: .5rem !important;
+  background: var(--bs-secondary-bg);
+  color: var(--bs-light);
+  border: none;
+  box-shadow: none;
+  font-weight: bolder;
+}
+
