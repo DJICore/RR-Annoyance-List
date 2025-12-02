@@ -751,5 +751,45 @@ export const players = [
     "accountNameFallback": "@St3amBoat",
     "accountId": 682252188,
     "violations": [5]
+  },
+  {
+    "accountNameFallback": "@-Jub-",
+    "accountId": 1156299461,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Ju415",
+    "accountId": 8796375,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@.SDSCP.",
+    "accountId": 2133656399,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@AliceIsntFromWonderland",
+    "accountId": 2131998717,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@GrownApple",
+    "accountId": 1692083183,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@810.",
+    "accountId": 1312932960,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Pimellllllllllllllllllllllllllllllllllllllllllll",
+    "accountId": 57688282,
+    "violations": [7, 11, 12]
+  },
+  {
+    "accountNameFallback": "@Npoko989",
+    "accountId": 362897822,
+    "violations": [5]
   }
 ]
