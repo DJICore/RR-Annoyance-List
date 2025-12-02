@@ -18,10 +18,6 @@ section {
   margin: 2rem 0;
 }
 
-#rules-button, #players-button, #insert-players-button {
-  margin-right: .5rem;
-}
-
 .modal-header {
   padding: .5rem 1rem;
 }
