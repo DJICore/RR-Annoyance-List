@@ -706,5 +706,50 @@ export const players = [
     "accountNameFallback": "@-ZodiacVR-",
     "accountId": 38915638,
     "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Official_Crimson",
+    "accountId": 1210356496,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@idris1226.",
+    "accountId": 21643891,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@IMAKESHIRTZ",
+    "accountId": 19587034,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@pingul",
+    "accountId": 14340423,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Official-Toxic",
+    "accountId": 1489720477,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@NewYork.",
+    "accountId": 19593756,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@TFRH_0341",
+    "accountId": 71350390,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@zackdvk",
+    "accountId": 8813907,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@St3amBoat",
+    "accountId": 682252188,
+    "violations": [5]
   }
 ]

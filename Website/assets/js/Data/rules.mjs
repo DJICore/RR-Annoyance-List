@@ -58,5 +58,9 @@ export const rules = {
   "14": {
     "title": "Excessive Begging",
     "description": "Repeatedly asking for items, tokens, or other in-game benefits after being told no in a manner that disrupts normal gameplay or social interactions."
+  },
+  "15": {
+    "title": "Excessive Subscribe Prompts",
+    "description": "Repeatedly prompting users to subscribe or follow or placing giant subscribe prompts/buttons in rooms in a disruptive manner."
   }
 }
