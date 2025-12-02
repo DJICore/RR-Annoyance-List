@@ -36,32 +36,49 @@ $(function () {
       insertPlayers: []
     },
     init: () => {
+
+      // Initial log output
       console.log('Loaded rules:', Object.keys(rules).length);
       console.log('Loaded players:', players.length);
+
+      // Example usage logs
       console.log('Example - Violations for @BearDaBear:', _.func.getPlayerViolations('@BearDaBear'));
+
+      // Render initial table
       _.render.table.players();
+
+      // Initialize toolbar
       _.render.toolbar.buttons();
       _.load.table.toolbar.search();
       _.load.table.toolbar.sortButton();
+
     },
     func: {
-      getViolationDefinition: (violationId) => {
+      getViolationDefinition: (violationId) => { // Get the violation definition by ID
+        // Find and return the rule definition
         return rules[violationId] || null;
       },
-      getPlayerViolations: (playerName) => {
+      getPlayerViolations: (playerName) => { // Get violation definitions for a player by account name
+        // Initialize variables
         let violations = [];
         let violationsDefined = [];
+
+        // Find player and map violation IDs
         const player = players.find(p => p.accountName === playerName);
         violations = player ? player.violations : [];
+
+        // Loop through violation IDs and get definitions
         $.each(violations, (index, violationId) => {
           const definition = _.func.getViolationDefinition(violationId);
           if (definition) {
             violationsDefined.push(definition);
           }
         });
+
+        // Return array of violation definitions
         return violationsDefined;
       },
-      selectElementContents: (el) => {
+      selectElementContents: (el) => { // Select the contents of an element
         var range = document.createRange();
         range.selectNodeContents(el);
         var sel = window.getSelection();
@@ -73,31 +90,54 @@ $(function () {
       table: {
         toolbar: {
           search: () => {
+            // Initialize variables
             let searchElement = $('#tableSearchBar');
             let tableBody = $('#tableBody');
+
+            // Handle search input
             searchElement.on('keyup', function () {
+
+              // Get search query
               const query = $(this).val().toLowerCase();
+
+              // Loop through table rows
               tableBody.find('tr').each(function () {
                 const row = $(this);
+
+                // Get player name from row
                 const playerName = row.find('.player-account-name').text().toLowerCase();
+
+                // Show/hide row based on search query match
                 if (playerName.includes(query)) {
                   row.show();
                 } else {
                   row.hide();
                 }
+
               });
             });
           },
           sortButton: () => {
+            // Initialize variables
             let sortButton = $('#tableSortButton');
             let tableBody = $('#tableBody');
             let sortStates = ['default', 'asc', 'desc'];
             let currentStateIndex = 0;
+
+            // Handle sort button click
             sortButton.on('click', function () {
+
+              // Cycle to next sort state
               currentStateIndex = (currentStateIndex + 1) % sortStates.length;
               const currentState = sortStates[currentStateIndex];
+
+              // Update button icon
               sortButton.html(_.data.htmlIcons['sort' + (currentState === 'default' ? 'Default' : currentState === 'asc' ? 'Up' : 'Down')]);
+
+              // Get table rows
               let rows = tableBody.find('tr').get();
+
+              // Sort rows based on current state
               rows.sort((a, b) => {
                 const nameA = $(a).find('.player-account-name').text().toLowerCase();
                 const nameB = $(b).find('.player-account-name').text().toLowerCase();
@@ -108,7 +148,10 @@ $(function () {
                 }
                 return 0;
               });
+
+              // Re-append sorted rows to table body
               tableBody.append(rows);
+              
             });
           }
         }
@@ -185,6 +228,8 @@ $(function () {
       },
       toolbar: {
         buttons: () => {
+
+          // Render rules button
           let rulesButtonText = '{{icon}}Rules: {{amount}}'
           rulesButtonText = rulesButtonText.replace('{{icon}}', _.data.htmlIcons.shield);
           rulesButtonText = rulesButtonText.replace('{{amount}}', Object.keys(rules).length);
@@ -194,11 +239,13 @@ $(function () {
             _.render.table.rules();
           });
 
+          // Render players button
           let playersButtonText = '{{icon}}Players: {{amount}}'
           playersButtonText = playersButtonText.replace('{{icon}}', _.data.htmlIcons.idBadge);
           playersButtonText = playersButtonText.replace('{{amount}}', players.length);
           $('#players-button').html(playersButtonText);
 
+          // Render insert players button
           $('#insert-players-button').on('click', () => {
             _.data.insertPlayers = [];
             _.render.modals.insertPlayers.refreshTable();
@@ -207,6 +254,7 @@ $(function () {
             _.render.modals.insertPlayers.init.buttons();
             $('#insert-players-modal').modal('show');
           });
+
         }
       },
       modals: {
