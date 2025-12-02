@@ -646,5 +646,65 @@ export const players = [
     "accountNameFallback": "@dxb.",
     "accountId": 3569417,
     "violations": [5]
+  },
+  {
+    "accountNameFallback": "@abndo",
+    "accountId": 1523223405,
+    "violations": [7]
+  },
+  {
+    "accountNameFallback": "@RwwQ",
+    "accountId": 15635202,
+    "violations": [10]
+  },
+  {
+    "accountNameFallback": "@Shdhxhxgxvzgzggdgdhsh",
+    "accountId": 819774087,
+    "violations": [7, 10]
+  },
+  {
+    "accountNameFallback": "@IM.i",
+    "accountId": 3568326,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Scooby-who",
+    "accountId": 606575807,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@BaileySimulator",
+    "accountId": 44410150,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Sam.",
+    "accountId": 797486134,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@LimeThomas",
+    "accountId": 2071521,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@FVSR.",
+    "accountId": 1808063949,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@PrimeCrue",
+    "accountId": 8517712,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Jeremi4h",
+    "accountId": 34528948,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@-ZodiacVR-",
+    "accountId": 38915638,
+    "violations": [5]
   }
 ]

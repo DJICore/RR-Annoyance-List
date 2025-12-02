@@ -54,5 +54,9 @@ export const rules = {
   "13": {
     "title": "Inappropriate Content",
     "description": "Any form of inappropriate content, including but not limited to hate speech, graphic violence, or explicit material."
+  },
+  "14": {
+    "title": "Excessive Begging",
+    "description": "Repeatedly asking for items, tokens, or other in-game benefits after being told no in a manner that disrupts normal gameplay or social interactions."
   }
 }
