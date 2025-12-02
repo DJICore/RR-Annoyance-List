@@ -406,5 +406,245 @@ export const players = [
     "accountNameFallback": "@Rage",
     "accountId": 19318572,
     "violations": [0, 1, 2, 3, 8]
+  },
+  {
+    "accountNameFallback": "@Zudha",
+    "accountId": 22921954,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@Sulista.",
+    "accountId": 11732275,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@Mrhoodie40",
+    "accountId": 1568478570,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Naatry",
+    "accountId": 8120629,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@selza-",
+    "accountId": 10987502,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@59i",
+    "accountId": 869681416,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@SnugRR",
+    "accountId": 6638897,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@Ke..",
+    "accountId": 57530919,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@LilYungy",
+    "accountId": 2143280666,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@vamphugs",
+    "accountId": 1357116478,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@EditedbyPlayz",
+    "accountId": 7413130,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@dared8vil",
+    "accountId": 1898684838,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Yacify",
+    "accountId": 3937604,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@JuniorDaCreatorRR",
+    "accountId": 1465541700,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@.buy",
+    "accountId": 602910667,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@-LordHunter",
+    "accountId": 27660198,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@RapidSquirrel11971",
+    "accountId": 1724884152,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@cmd",
+    "accountId": 1306658795,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@Textured.",
+    "accountId": 1614774818,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@OfficialCv2",
+    "accountId": 464561235,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@-727",
+    "accountId": 1599654246,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@nDa.08Zz",
+    "accountId": 1878739406,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@official-Teen",
+    "accountId": 1956214551,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@thesunremindsmeofyou",
+    "accountId": 7544010,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@GrandissimoBr",
+    "accountId": 1342576163,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@WetOnRR",
+    "accountId": 1377649517,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@NFyga",
+    "accountId": 1772168522,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@zabaaa",
+    "accountId": 2131991662,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@XSunOfficial",
+    "accountId": 1124650642,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@zan",
+    "accountId": 3740471,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@LozRandomn",
+    "accountId": 167628332,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@MXQ.",
+    "accountId": 70998287,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@XNNXR",
+    "accountId": 729889986,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@emohugs",
+    "accountId": 9039235,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@-2i",
+    "accountId": 54762501,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@Hxou",
+    "accountId": 1317908195,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@ee-",
+    "accountId": 20114034,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Vamixe",
+    "accountId": 1278263923,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@HyperEmil",
+    "accountId": 68106697,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@.2651",
+    "accountId": 1609238989,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@640.",
+    "accountId": 1482930771,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@y2i-",
+    "accountId": 1764981693,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@GrandBear12658",
+    "accountId": 623556593,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@.4265",
+    "accountId": 299971665,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@DoxDorm",
+    "accountId": 1455944523,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@001...",
+    "accountId": 1524558476,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@SnoozYTACC",
+    "accountId": 39451263,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@dxb.",
+    "accountId": 3569417,
+    "violations": [5]
   }
 ]
