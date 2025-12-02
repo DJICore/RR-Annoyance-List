@@ -25,6 +25,12 @@ $(function () {
         </svg>`,
         sortDown: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor">
           <path d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"></path>
+        </svg>`,
+        idBadge: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor">
+          <path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zm96 320h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM144 64h96c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path>
+        </svg>`,
+        shield: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+          <path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0z"></path>
         </svg>`
       },
       insertPlayers: []
@@ -179,15 +185,19 @@ $(function () {
       },
       toolbar: {
         buttons: () => {
-          let rulesButtonText = 'Rules: {{amount}}'
-          $('#rules-button').html(rulesButtonText.replace('{{amount}}', Object.keys(rules).length));
+          let rulesButtonText = '{{icon}}Rules: {{amount}}'
+          rulesButtonText = rulesButtonText.replace('{{icon}}', _.data.htmlIcons.shield);
+          rulesButtonText = rulesButtonText.replace('{{amount}}', Object.keys(rules).length);
+          $('#rules-button').html(rulesButtonText);
           $('#rules-button').on('click', () => {
             $('#rules-modal').modal('show');
             _.render.table.rules();
           });
 
-          let playersButtonText = 'Players: {{amount}}'
-          $('#players-button').html(playersButtonText.replace('{{amount}}', players.length));
+          let playersButtonText = '{{icon}}Players: {{amount}}'
+          playersButtonText = playersButtonText.replace('{{icon}}', _.data.htmlIcons.idBadge);
+          playersButtonText = playersButtonText.replace('{{amount}}', players.length);
+          $('#players-button').html(playersButtonText);
 
           $('#insert-players-button').on('click', () => {
             _.data.insertPlayers = [];
