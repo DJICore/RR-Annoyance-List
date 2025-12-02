@@ -268,21 +268,59 @@ $(function () {
             }
           },
           showPlayerSearchDropdown: (inputElement, searchResults) => {
+
+            // Set dropdown position variables
             let inputX = inputElement.offset().left;
             let inputY = inputElement.offset().top + inputElement.outerHeight();
+
+            // Get dropdown element
             let playerSearchDropdown = $('#insert-players-modal #player-search-dropdown');
+
+            // Clear previous results
             playerSearchDropdown.empty();
+
+            // Populate dropdown with search results
             $.each(searchResults, (index, player) => {
+
+              // Check if player id is already in the player insertion table
+              let exists = false;
+              let existingPlayerIDs = [];
+              let existingPlayerIDsElements = $('#insert-players-modal #tableBodyInsertPlayers .player-id');
+              $.each(existingPlayerIDsElements, (i, elem) => {
+                existingPlayerIDs.push($(elem).html().trim());
+              });
+              // Check if player ID already exists
+              if (existingPlayerIDs.includes(player.accountId.toString())) {
+                exists = true;
+              }
+
+              // Skip if player already exists in the list
+              if (exists) return;
+
+              // Create dropdown option
               const option = $(`<div class="dropdown-item" data-account-id="${player.accountId}">AN: ${player.username} - DN: ${player.displayName}</div>`);
+
+              // Handle option click
               option.on('click', function () {
+
+                // Update input element with selected player information
                 inputElement.html('@' + player.username);
                 inputElement.parent().find('.player-id').html(player.accountId);
+
+                // Clear dropdown and update JSON output
                 playerSearchDropdown.empty();
                 _.render.modals.insertPlayers.updateJSONOutput();
+
               });
+
+              // Append option to dropdown
               playerSearchDropdown.append(option);
+
             });
+
+            // Position dropdown below input element
             playerSearchDropdown.css({ top: inputY, left: inputX });
+
           },
           showViolationDropdown: (inputElement) => {
             let inputX = inputElement.offset().left;
