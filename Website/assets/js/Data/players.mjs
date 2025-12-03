@@ -791,5 +791,15 @@ export const players = [
     "accountNameFallback": "@Npoko989",
     "accountId": 362897822,
     "violations": [5]
+  },
+  {
+    "accountNameFallback": "@egg_Man_lol",
+    "accountId": 1676547651,
+    "violations": [4]
+  },
+  {
+    "accountNameFallback": "@tolotomuch",
+    "accountId": 58655556,
+    "violations": [4]
   }
 ]
