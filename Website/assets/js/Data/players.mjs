@@ -242,7 +242,7 @@ export const players = [
   {
     "accountNameFallback": "@BearDaBear",
     "accountId": 1924772,
-    "violations": [3, 4, 5, 8, 9]
+  "violations": [3, 4, 5, 8, 9, 11]
   },
   {
     "accountNameFallback": "@Bubbles",
@@ -801,5 +801,25 @@ export const players = [
     "accountNameFallback": "@tolotomuch",
     "accountId": 58655556,
     "violations": [4]
+  },
+  {
+    "accountNameFallback": "@RauzMuz",
+    "accountId": 1570629,
+    "violations": [12, 7]
+  },
+  {
+    "accountNameFallback": "@clncytyler",
+    "accountId": 10860387,
+    "violations": [1, 0]
+  },
+  {
+    "accountNameFallback": "@Acorrion",
+    "accountId": 13153530,
+    "violations": [0, 1]
+  },
+  {
+    "accountNameFallback": "@NyaNyaCutie",
+    "accountId": 30970338,
+    "violations": [14, 2, 1]
   }
 ]
