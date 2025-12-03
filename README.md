@@ -1,4 +1,4 @@
-## Rec Room — The Annoyance List
+## Rec Room Annoyance List
 
 Welcome! This is a community-driven list for Rec Room players. It helps you quickly find players and see which in-game behaviors or “annoyances” they’re known for, so you can decide who to invite, mute, avoid, or just be prepared for.
 
