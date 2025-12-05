@@ -821,5 +821,90 @@ export const players = [
     "accountNameFallback": "@NyaNyaCutie",
     "accountId": 30970338,
     "violations": [14, 2, 1]
+  },
+  {
+    "accountNameFallback": "@NaoEOVoltZ",
+    "accountId": 6428574,
+    "violations": [3, 5, 1]
+  },
+  {
+    "accountNameFallback": "@CRP.com",
+    "accountId": 238351843,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@S.R.4.L.E.X",
+    "accountId": 52183620,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@IStormy.altI",
+    "accountId": 157518059,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@Xominvr",
+    "accountId": 667200181,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@weirdcat69420",
+    "accountId": 1063348164,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@D4RK-Official",
+    "accountId": 38614849,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@dkrz",
+    "accountId": 1204280,
+    "violations": [5, 3, 2]
+  },
+  {
+    "accountNameFallback": "@Xx.L0V3R.xX",
+    "accountId": 77523536,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@.TestIsMyName",
+    "accountId": 15204812,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@CallousBobcat2573",
+    "accountId": 1156879670,
+    "violations": [5, 3]
+  },
+  {
+    "accountNameFallback": "@coolkid987654321",
+    "accountId": 17040667,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@OfficialMochi",
+    "accountId": 1298162121,
+    "violations": [3, 5]
+  },
+  {
+    "accountNameFallback": "@Penly",
+    "accountId": 2143848504,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@XJ--16",
+    "accountId": 19572694,
+    "violations": [5]
+  },
+  {
+    "accountNameFallback": "@memesoul",
+    "accountId": 76379786,
+    "violations": [3]
+  },
+  {
+    "accountNameFallback": "@BEAN",
+    "accountId": 5961958,
+    "violations": [3, 1]
   }
 ]
