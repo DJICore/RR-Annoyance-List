@@ -154,6 +154,32 @@ $(function () {
               
             });
           }
+        },
+        remoteData: async () => {
+          let maxAccountsPerRequest = 100;
+          const playerIDs = players.map(player => player.accountId);
+          for (let i = 0; i < playerIDs.length; i += maxAccountsPerRequest) {
+            const batchIds = playerIDs.slice(i, i + maxAccountsPerRequest);
+            const queryIds = batchIds.map(id => `id=${id}`).join('&');
+            const accountsRequest = await request({
+              url: _.data.recnet.endpoints.accountById.replace('{{queryIds}}', '?' + queryIds),
+              proxy: _.data.recnet.proxy
+            });
+            const accountsData = accountsRequest.data;
+            console.log('Fetched account data for players:', accountsData);
+            $.each(accountsData, (index, account) => {
+              const playerNameElement = $(`#playername-${account.accountId}`);
+              if (playerNameElement.length) {
+                playerNameElement.html('@' + account.username);
+                const playerHrefElement = playerNameElement.parent();
+                playerHrefElement.attr('href', 'https://rec.net/user/' + account.username);
+              }
+              const playerDisplayNameElement = playerNameElement.parent().parent().parent().find('.player-display-name');
+              if (playerDisplayNameElement.length) {
+                playerDisplayNameElement.html(account.displayName);
+              }
+            });
+          }
         }
       }
     },
@@ -190,26 +216,7 @@ $(function () {
           // Initialize tooltips
           $('[data-bs-toggle="tooltip"]').tooltip();
 
-          const playerIDs = players.map(player => player.accountId);
-          const queryIds = playerIDs.map(id => `id=${id}`).join('&');
-          const accountsRequest = await request({
-            url: _.data.recnet.endpoints.accountById.replace('{{queryIds}}', '?' + queryIds),
-            proxy: _.data.recnet.proxy
-          });
-          const accountsData = accountsRequest.data;
-          console.log('Fetched account data for players:', accountsData);
-          $.each(accountsData, (index, account) => {
-            const playerNameElement = $(`#playername-${account.accountId}`);
-            if (playerNameElement.length) {
-              playerNameElement.html('@' + account.username);
-              const playerHrefElement = playerNameElement.parent();
-              playerHrefElement.attr('href', 'https://rec.net/user/' + account.username);
-            }
-            const playerDisplayNameElement = playerNameElement.parent().parent().parent().find('.player-display-name');
-            if (playerDisplayNameElement.length) {
-              playerDisplayNameElement.html(account.displayName);
-            }
-          });
+          _.load.table.remoteData();
         },
         rules: () => {
           $('.sample-row').remove(); // Clear existing sample rows
